@@ -22,6 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
+LOGIN_REDIRECT_URL = 'home'
+
+LOGOUT_REDIRECT_URL = 'home'
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -37,7 +42,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig', #new
+    'accounts.apps.AccountsConfig',
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
